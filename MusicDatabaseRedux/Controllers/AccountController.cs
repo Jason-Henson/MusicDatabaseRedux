@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using MusicDatabaseRedux.Data;
 using MusicDatabaseRedux.Models;
 using MusicDatabaseRedux.Providers;
 using MusicDatabaseRedux.Results;

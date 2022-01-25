@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using MusicDatabaseRedux.Providers;
 using MusicDatabaseRedux.Models;
+using MusicDatabaseRedux.Data;
 
 namespace MusicDatabaseRedux
 {

@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux", "MusicDatabaseRedux\MusicDatabaseRedux.csproj", "{B2723270-13B8-41A6-9023-243B90241677}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux.Data", "MusicDatabaseRedux.Data\MusicDatabaseRedux.Data.csproj", "{763E8B82-67B7-436C-9033-8DCBFFEFB115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux.Models", "MusicDatabaseRedux.Models\MusicDatabaseRedux.Models.csproj", "{E32157EB-22B6-4740-9327-363ED540E130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux.Services", "MusicDatabaseRedux.Services\MusicDatabaseRedux.Services.csproj", "{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{B2723270-13B8-41A6-9023-243B90241677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2723270-13B8-41A6-9023-243B90241677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2723270-13B8-41A6-9023-243B90241677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{763E8B82-67B7-436C-9033-8DCBFFEFB115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{763E8B82-67B7-436C-9033-8DCBFFEFB115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{763E8B82-67B7-436C-9033-8DCBFFEFB115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{763E8B82-67B7-436C-9033-8DCBFFEFB115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E32157EB-22B6-4740-9327-363ED540E130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32157EB-22B6-4740-9327-363ED540E130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32157EB-22B6-4740-9327-363ED540E130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32157EB-22B6-4740-9327-363ED540E130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
