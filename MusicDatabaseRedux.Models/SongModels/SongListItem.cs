@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MusicDatabaseRedux.Models.SongModels
 {
-    internal class SongIteam
+    public class SongListItem
     {
+        public int Id { get; set; }
+        public string SongName { get; set; }
+        
     }
 }
