@@ -60,5 +60,12 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
             return Ok("Artiest has been updated");
         }
 
+
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateArtistService();
+            if (!service.DeleteArtist(id)) return InternalServerError();
+            return Ok($"The artist you selected has been removed.");
+        }
     }
 }
