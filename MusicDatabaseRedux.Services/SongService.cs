@@ -1,10 +1,7 @@
 ﻿using MusicDatabaseRedux.Data;
 using MusicDatabaseRedux.Models.SongModels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicDatabaseRedux.Services
 {
@@ -44,6 +41,7 @@ namespace MusicDatabaseRedux.Services
                 };
             }
         }
+
         public IEnumerable<SongListItem> GetSongs()
         {
             using (var ctx = new ApplicationDbContext())
@@ -57,15 +55,13 @@ namespace MusicDatabaseRedux.Services
                         {
                             Id = e.Id,
                             SongName = e.SongName,
-
                         }
             );
 
-
                 return query.ToArray();
             }
-
         }
+
         public bool UpdateSong(SongUpdate model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -78,8 +74,8 @@ namespace MusicDatabaseRedux.Services
 
                 return ctx.SaveChanges() == 1;
             }
-
         }
+
         public bool DeleteSong(int Id)
         {
             using (var ctx = new ApplicationDbContext())

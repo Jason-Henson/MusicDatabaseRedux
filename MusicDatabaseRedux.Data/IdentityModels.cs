@@ -34,11 +34,10 @@ namespace MusicDatabaseRedux.Data
 
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
-<<<<<<< HEAD
-=======
+
+        public DbSet<Playlist> Playlists { get; set; }
+
         public DbSet<Song> Songs { get; set; }
-        
->>>>>>> 4f6bd45d16dc64ae40f2e016ca8b110c095ddd49
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

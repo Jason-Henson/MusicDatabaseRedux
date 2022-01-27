@@ -6,6 +6,7 @@ using System.Web.Http;
 
 namespace MusicDatabaseRedux.Controllers.Album_Controller
 {
+    [Authorize]
     public class AlbumController : ApiController
     {
         public IHttpActionResult Get()
@@ -42,6 +43,30 @@ namespace MusicDatabaseRedux.Controllers.Album_Controller
             AlbumService albumService = CreateService();
             var album = albumService.GetAlbumById(id);
             return Ok(album);
+        }
+
+        public IHttpActionResult Put(AlbumEdit album)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var albumService = CreateService();
+
+            if (!albumService.UpdateAlbum(album))
+                return InternalServerError();
+
+            return Ok(albumService);
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var albumService = CreateService();
+
+            if (!albumService.DeleteAlbum(id))
+                return InternalServerError();
+
+            return Ok(albumService);
         }
     }
 }

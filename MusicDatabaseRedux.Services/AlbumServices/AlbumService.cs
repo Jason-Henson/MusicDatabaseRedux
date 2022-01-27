@@ -63,5 +63,34 @@ namespace MusicDatabaseRedux.Services.AlbumServices
                     };
             }
         }
+
+        public bool UpdateAlbum(AlbumEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Albums
+                        .Single(e => e.AlbumID == model.AlbumID);
+
+                entity.AlbumName = model.AlbumName;
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteAlbum(int albumID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Albums
+                        .Single(e => e.AlbumID == albumID);
+
+                ctx.Albums.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

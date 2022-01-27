@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MusicDatabaseRedux.Models.AlbumModels
+﻿namespace MusicDatabaseRedux.Models.AlbumModels
 {
-    class AlbumEdit
+    public class AlbumEdit
     {
+        public int AlbumID { get; set; }
+        public string AlbumName { get; set; }
+
+        public override string ToString() => AlbumName;
     }
 }
