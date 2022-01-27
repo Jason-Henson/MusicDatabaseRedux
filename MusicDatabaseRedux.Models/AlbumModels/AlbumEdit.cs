@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicDatabaseRedux.Models.AlbumModels
 {
-    public class AlbumEdit
+    class AlbumEdit
     {
     }
 }
