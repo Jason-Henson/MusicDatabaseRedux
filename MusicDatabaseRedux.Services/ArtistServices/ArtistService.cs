@@ -32,5 +32,55 @@ namespace MusicDatabaseRedux.Services.ArtistServices
                 return ctx.SaveChanges() > 0;
             }
         }
+
+        public IEnumerable<ArtistListItem> GetArtists()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Artists
+                    .Select(
+                        e =>
+                        new ArtistListItem
+                        {
+                            ArtistName = e.Name,
+                        }
+                        );
+                return query.ToArray();
+            }
+        }
+
+        public ArtistDetail GetArtistById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Artists
+                    .Single( e => e.ArtistId == id && e.OwnerId == _userId);
+                return new ArtistDetail
+                {
+                    ArtistId = entity.ArtistId,
+                    IsAlive = entity.IsAlive,
+                    NumberOfMembers = entity.NumberOfMembers
+                };
+            }
+        }
+
+        public bool UpdateArtist(ArtistEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Artists
+                    .Single(e => e.ArtistId == model.ArtistId && e.OwnerId == _userId);
+                entity.Name = model.Name;
+                entity.ArtistId = model.ArtistId;
+                entity.IsAlive = model.IsAllive;
+
+                return ctx.SaveChanges() > 0;
+            }
+        }
+
     }
 }
