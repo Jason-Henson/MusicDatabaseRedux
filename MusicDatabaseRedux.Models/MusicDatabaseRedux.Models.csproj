@@ -48,6 +48,7 @@
     <Compile Include="AlbumModels\AlbumListItem.cs" />
     <Compile Include="ArtistModels\ArtistCreate.cs" />
     <Compile Include="ArtistModels\ArtistDetail.cs" />
+    <Compile Include="ArtistModels\ArtistEdit.cs" />
     <Compile Include="ArtistModels\ArtistUpdate.cs" />
     <Compile Include="ArtistModels\ArtistListItem.cs" />
     <Compile Include="PlaylistModels\PlaylistCreate.cs" />
