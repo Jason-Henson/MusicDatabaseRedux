@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusicDatabaseRedux.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace MusicDatabaseRedux.Models.SongModels
     {
         public int Id { get; set; }
         public string SongName { get; set; }
-        [ForeignKey("Artist")]
+        [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
         public string Genre { get; set; }
     }
