@@ -1,8 +1,7 @@
 ﻿namespace MusicDatabaseRedux.Data.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class RemovePlaylistClass : DbMigration
     {
         public override void Up()
@@ -15,19 +14,19 @@
             AddColumn("dbo.Song", "OwnerId", c => c.Guid(nullable: false));
             DropTable("dbo.Song_Album");
         }
-        
+
         public override void Down()
         {
             CreateTable(
                 "dbo.Song_Album",
                 c => new
-                    {
-                        Song_AlbumId = c.Int(nullable: false, identity: true),
-                        SongId = c.Int(nullable: false),
-                        AlbumId = c.Int(nullable: false),
-                    })
+                {
+                    Song_AlbumId = c.Int(nullable: false, identity: true),
+                    SongId = c.Int(nullable: false),
+                    AlbumId = c.Int(nullable: false),
+                })
                 .PrimaryKey(t => t.Song_AlbumId);
-            
+
             DropColumn("dbo.Song", "OwnerId");
             DropColumn("dbo.Artist", "OwnerId");
             CreateIndex("dbo.Song_Album", "AlbumId");
