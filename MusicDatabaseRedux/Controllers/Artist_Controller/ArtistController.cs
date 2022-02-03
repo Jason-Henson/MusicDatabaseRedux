@@ -41,8 +41,8 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
                 return BadRequest();
             }
             ArtistService artistService = CreateArtistService();
-            artistService.GetArtists();
-            return Ok(artistService);
+            var artists = artistService.GetArtistById(id);
+            return Ok(artists);
         }
 
         public IHttpActionResult Put(ArtistEdit artist)

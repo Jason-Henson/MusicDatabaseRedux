@@ -1,4 +1,5 @@
 ﻿using MusicDatabaseRedux.Data;
+using MusicDatabaseRedux.Models.AlbumModels;
 using MusicDatabaseRedux.Models.ArtistModels;
 using System;
 using System.Collections.Generic;
@@ -55,12 +56,13 @@ namespace MusicDatabaseRedux.Services.ArtistServices
             {
                 var entity = ctx
                     .Artists
-                    .Single(e => e.ArtistId == id && e.OwnerId == _userId);
+                    .SingleOrDefault(e => e.ArtistId == id);
                 return new ArtistDetail
                 {
                     ArtistId = entity.ArtistId,
+                    ArtistName = entity.Name,
                     IsAlive = entity.IsAlive,
-                    NumberOfMembers = entity.NumberOfMembers
+                    NumberOfMembers = entity.NumberOfMembers,
                 };
             }
         }
@@ -71,7 +73,7 @@ namespace MusicDatabaseRedux.Services.ArtistServices
             {
                 var entity = ctx
                     .Artists
-                    .Single(e => e.ArtistId == model.ArtistId && e.OwnerId == _userId);
+                    .SingleOrDefault(e => e.ArtistId == model.ArtistId);
                 entity.Name = model.Name;
                 entity.ArtistId = model.ArtistId;
                 entity.IsAlive = model.IsAllive;
@@ -84,7 +86,7 @@ namespace MusicDatabaseRedux.Services.ArtistServices
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Artists.Single(e => e.ArtistId == artistId && e.OwnerId == _userId);
+                var entity = ctx.Artists.Single(e => e.ArtistId == artistId);
                 ctx.Artists.Remove(entity);
                 return ctx.SaveChanges() > 0;
             }
