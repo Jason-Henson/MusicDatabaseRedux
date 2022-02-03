@@ -44,7 +44,7 @@ namespace MusicDatabaseRedux.Services.ArtistServices
                         e =>
                         new ArtistListItem
                         {
-                            ArtistName = e.Name,
+                            Name = e.Name,
                         }
                         );
                 return query.ToArray();

@@ -15,7 +15,6 @@ namespace MusicDatabaseRedux.Models.SongModels
         [MaxLength(50, ErrorMessage = "Song name must be shorter")]
         public string SongName { get; set; }
 
-        [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
 
         public string Genre { get; set; }
