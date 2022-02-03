@@ -31,11 +31,11 @@ namespace MusicDatabaseRedux.Services
                 var entity =
                     ctx
                     .Songs
-                    .Single(e => e.Id == id);
+                    .Single(e => e.SongId == id);
                 return
                 new SongDetails
                 {
-                    Id = entity.Id,
+                    Id = entity.SongId,
                     SongName = entity.SongName,
                     ArtistId = entity.ArtistId,
                 };
@@ -53,7 +53,7 @@ namespace MusicDatabaseRedux.Services
                         e =>
                         new SongListItem
                         {
-                            Id = e.Id,
+                            Id = e.SongId,
                             SongName = e.SongName,
                         }
             );
@@ -68,7 +68,7 @@ namespace MusicDatabaseRedux.Services
             {
                 var entity = ctx
                     .Songs
-                    .Single(e => e.Id == model.Id);
+                    .Single(e => e.SongId == model.Id);
                 entity.SongName = model.SongName;
                 entity.ArtistId = model.ArtistId;
 
@@ -83,7 +83,7 @@ namespace MusicDatabaseRedux.Services
                 var entity =
                     ctx
                     .Songs
-                    .Single(e => e.Id == Id);
+                    .Single(e => e.SongId == Id);
 
                 ctx.Songs.Remove(entity);
 

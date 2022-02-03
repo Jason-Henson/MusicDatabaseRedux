@@ -61,6 +61,11 @@
     <Compile Include="SongModels\SongListItem.cs" />
     <Compile Include="SongModels\SongUpdate.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MusicDatabaseRedux.Data\MusicDatabaseRedux.Data.csproj">
+      <Project>{763E8B82-67B7-436C-9033-8DCBFFEFB115}</Project>
+      <Name>MusicDatabaseRedux.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
