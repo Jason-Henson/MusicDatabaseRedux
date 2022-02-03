@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32106.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseReduxAPI", "MusicDatabaseRedux\MusicDatabaseReduxAPI.csproj", "{B2723270-13B8-41A6-9023-243B90241677}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux.Models", "MusicDatabaseRedux.Models\MusicDatabaseRedux.Models.csproj", "{E32157EB-22B6-4740-9327-363ED540E130}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux.Services", "MusicDatabaseRedux.Services\MusicDatabaseRedux.Services.csproj", "{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDatabaseRedux.UI", "MusicDatabaseRedux.UI\MusicDatabaseRedux.UI.csproj", "{678D55BC-109B-4127-934D-40DB700519FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47D4B7F9-7B8F-4832-9FF4-2F725FA73C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678D55BC-109B-4127-934D-40DB700519FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678D55BC-109B-4127-934D-40DB700519FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678D55BC-109B-4127-934D-40DB700519FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678D55BC-109B-4127-934D-40DB700519FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

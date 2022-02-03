@@ -9,10 +9,9 @@ using System.Web.Http;
 
 namespace MusicDatabaseRedux.Controllers.Artist_Controller
 {
-    [Authorize]
     public class ArtistController : ApiController
     {
-        private ArtistService CreateArtistService()
+        public ArtistService CreateArtistService()
         {
             var artistId = Guid.Parse(User.Identity.GetUserId());
             var artistService = new ArtistService(artistId);
