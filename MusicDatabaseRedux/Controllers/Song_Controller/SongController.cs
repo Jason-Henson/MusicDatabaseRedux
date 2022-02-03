@@ -50,7 +50,7 @@ namespace MusicDatabaseRedux.Controllers.Song_Controller
 
             if (!service.UpdateSong(song)) return InternalServerError();
 
-            return Ok();
+            return Ok("Song has been updated");
         }
 
         [HttpDelete]
