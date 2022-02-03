@@ -30,7 +30,7 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var service = CreateArtistService(); 
+            var service = CreateArtistService();
 
             if (!service.CreateArtist(artist)) return InternalServerError();
 
@@ -44,10 +44,10 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
                 return BadRequest();
             }
             ArtistService artistService = CreateArtistService();
-            artistService.GetArtists();
-            return Ok(artistService);
+            var artists = artistService.GetArtistById(id);
+            return Ok(artists);
         }
-     
+
         public IHttpActionResult Put(ArtistEdit artist)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -59,7 +59,6 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
 
             return Ok("Artiest has been updated");
         }
-
 
         public IHttpActionResult Delete(int id)
         {

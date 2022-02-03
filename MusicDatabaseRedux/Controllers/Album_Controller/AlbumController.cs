@@ -42,6 +42,10 @@ namespace MusicDatabaseRedux.Controllers.Album_Controller
         {
             AlbumService albumService = CreateService();
             var album = albumService.GetAlbumById(id);
+            if (album is null)
+            {
+                return BadRequest($"Album with the id: {id} doesn't exist.");
+            }
             return Ok(album);
         }
 

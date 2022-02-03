@@ -1,4 +1,5 @@
 ﻿using MusicDatabaseRedux.Data;
+using MusicDatabaseRedux.Models.AlbumModels;
 using MusicDatabaseRedux.Models.ArtistModels;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,11 @@ namespace MusicDatabaseRedux.Services.ArtistServices
     {
         private readonly Guid _userId;
 
-
         public ArtistService(Guid userId)
         {
             _userId = userId;
         }
+
         public bool CreateArtist(ArtistCreate model)
         {
             var entity = new Artist()
@@ -57,12 +58,13 @@ namespace MusicDatabaseRedux.Services.ArtistServices
             {
                 var entity = ctx
                     .Artists
-                    .Single( e => e.ArtistId == id && e.OwnerId == _userId);
+                    .SingleOrDefault(e => e.ArtistId == id);
                 return new ArtistDetail
                 {
                     ArtistId = entity.ArtistId,
+                    ArtistName = entity.Name,
                     IsAlive = entity.IsAlive,
-                    NumberOfMembers = entity.NumberOfMembers
+                    NumberOfMembers = entity.NumberOfMembers,
                 };
             }
         }
@@ -73,7 +75,7 @@ namespace MusicDatabaseRedux.Services.ArtistServices
             {
                 var entity = ctx
                     .Artists
-                    .Single(e => e.ArtistId == model.ArtistId && e.OwnerId == _userId);
+                    .SingleOrDefault(e => e.ArtistId == model.ArtistId);
                 entity.Name = model.Name;
                 entity.ArtistId = model.ArtistId;
                 entity.IsAlive = model.IsAllive;
@@ -82,17 +84,14 @@ namespace MusicDatabaseRedux.Services.ArtistServices
             }
         }
 
-        public bool DeleteArtist (int artistId)
+        public bool DeleteArtist(int artistId)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Artists.Single(e => e.ArtistId == artistId && e.OwnerId == _userId );
-                ctx.Artists.Remove( entity );
+                var entity = ctx.Artists.Single(e => e.ArtistId == artistId);
+                ctx.Artists.Remove(entity);
                 return ctx.SaveChanges() > 0;
             }
         }
-
-
-
     }
 }

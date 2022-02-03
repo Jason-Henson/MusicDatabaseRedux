@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlbumServices\AlbumService.cs" />
-    <Compile Include="ArtistService.cs" />
     <Compile Include="ArtistServices\ArtistService.cs" />
     <Compile Include="SongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
