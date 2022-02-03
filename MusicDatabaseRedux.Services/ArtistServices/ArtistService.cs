@@ -60,7 +60,7 @@ namespace MusicDatabaseRedux.Services.ArtistServices
                 return new ArtistDetail
                 {
                     ArtistId = entity.ArtistId,
-                    ArtistName = entity.Name,
+                    Name = entity.Name,
                     IsAlive = entity.IsAlive,
                     NumberOfMembers = entity.NumberOfMembers,
                 };

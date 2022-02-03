@@ -90,13 +90,9 @@
     <Compile Include="Album.cs" />
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202202031842373_Init.cs" />
-    <Compile Include="Migrations\202202031842373_Init.designer.cs">
-      <DependentUpon>202202031842373_Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202031351333_RemovePlaylistClass.cs" />
-    <Compile Include="Migrations\202202031351333_RemovePlaylistClass.designer.cs">
-      <DependentUpon>202202031351333_RemovePlaylistClass.cs</DependentUpon>
+    <Compile Include="Migrations\202202032013010_Init.cs" />
+    <Compile Include="Migrations\202202032013010_Init.designer.cs">
+      <DependentUpon>202202032013010_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,11 +103,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202031842373_Init.resx">
-      <DependentUpon>202202031842373_Init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202031351333_RemovePlaylistClass.resx">
-      <DependentUpon>202202031351333_RemovePlaylistClass.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202032013010_Init.resx">
+      <DependentUpon>202202032013010_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
