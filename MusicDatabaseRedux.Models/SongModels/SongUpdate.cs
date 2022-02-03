@@ -10,9 +10,9 @@ namespace MusicDatabaseRedux.Models.SongModels
 {
     public class SongUpdate
     {
-        public int Id { get; set; }
+        public int SongId { get; set; }
         public string SongName { get; set; }
-        [ForeignKey(nameof(Artist))]
+
         public int ArtistId { get; set; }
         public string Genre { get; set; }
     }

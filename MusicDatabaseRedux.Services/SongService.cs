@@ -35,7 +35,7 @@ namespace MusicDatabaseRedux.Services
                 return
                 new SongDetails
                 {
-                    Id = entity.SongId,
+                    SongId = entity.SongId,
                     SongName = entity.SongName,
                     ArtistId = entity.ArtistId,
                 };
@@ -53,7 +53,7 @@ namespace MusicDatabaseRedux.Services
                         e =>
                         new SongListItem
                         {
-                            Id = e.SongId,
+                            SongId = e.SongId,
                             SongName = e.SongName,
                         }
             );
@@ -68,7 +68,7 @@ namespace MusicDatabaseRedux.Services
             {
                 var entity = ctx
                     .Songs
-                    .Single(e => e.SongId == model.Id);
+                    .Single(e => e.SongId == model.SongId);
                 entity.SongName = model.SongName;
                 entity.ArtistId = model.ArtistId;
 
