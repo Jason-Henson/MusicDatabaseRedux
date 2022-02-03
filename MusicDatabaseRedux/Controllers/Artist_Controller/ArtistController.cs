@@ -2,9 +2,6 @@
 using MusicDatabaseRedux.Models.ArtistModels;
 using MusicDatabaseRedux.Services.ArtistServices;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 
 namespace MusicDatabaseRedux.Controllers.Artist_Controller
@@ -30,7 +27,7 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var service = CreateArtistService(); 
+            var service = CreateArtistService();
 
             if (!service.CreateArtist(artist)) return InternalServerError();
 
@@ -47,7 +44,7 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
             artistService.GetArtists();
             return Ok(artistService);
         }
-     
+
         public IHttpActionResult Put(ArtistEdit artist)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -59,7 +56,6 @@ namespace MusicDatabaseRedux.Controllers.Artist_Controller
 
             return Ok("Artiest has been updated");
         }
-
 
         public IHttpActionResult Delete(int id)
         {
