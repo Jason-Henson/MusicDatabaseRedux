@@ -79,7 +79,7 @@ namespace MusicDatabaseRedux.Services.SongAlbumServices
 
                 ctx.SongAlbums.Remove(entity);
 
-                return ctx.SaveChanges() > 0;
+                return ctx.SaveChanges() == 1;
             }
         }
     }
