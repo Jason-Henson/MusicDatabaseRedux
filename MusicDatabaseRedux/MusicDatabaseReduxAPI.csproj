@@ -211,6 +211,7 @@
     <Compile Include="Controllers\Artist_Controller\ArtistController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Playlist_Controler\PlaylistController.cs" />
+    <Compile Include="Controllers\SongAlbum_Controller\SongAlbumController.cs" />
     <Compile Include="Controllers\Song_Controller\SongController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">

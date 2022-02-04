@@ -61,6 +61,7 @@
     <Compile Include="ArtistServices\ArtistService.cs" />
     <Compile Include="SongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SongAlbumServices\SongAlbumService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicDatabaseRedux.Data\MusicDatabaseRedux.Data.csproj">
