@@ -1,8 +1,8 @@
+using MusicDatabaseRedux.Areas.HelpPage.ModelDescriptions;
+using MusicDatabaseRedux.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using MusicDatabaseRedux.Areas.HelpPage.ModelDescriptions;
-using MusicDatabaseRedux.Areas.HelpPage.Models;
 
 namespace MusicDatabaseRedux.Areas.HelpPage.Controllers
 {

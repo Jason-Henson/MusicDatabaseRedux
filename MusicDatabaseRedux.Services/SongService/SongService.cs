@@ -38,8 +38,6 @@ namespace MusicDatabaseRedux.Services
                     SongId = entity.SongId,
                     SongName = entity.SongName,
                     ArtistId = entity.ArtistId,
-                    ArtistName = entity.Artist.Name,
-                    Genre = entity.Genre  
                 };
             }
         }
@@ -57,7 +55,6 @@ namespace MusicDatabaseRedux.Services
                         {
                             SongId = e.SongId,
                             SongName = e.SongName,
-                            ArtistName = e.Artist.Name
                         }
             );
 
@@ -74,7 +71,6 @@ namespace MusicDatabaseRedux.Services
                     .Single(e => e.SongId == model.SongId);
                 entity.SongName = model.SongName;
                 entity.ArtistId = model.ArtistId;
-                entity.Genre = model.Genre;
 
                 return ctx.SaveChanges() == 1;
             }

@@ -2,10 +2,6 @@
 using MusicDatabaseRedux.Models.SongModels;
 using MusicDatabaseRedux.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace MusicDatabaseRedux.Controllers.Song_Controller
@@ -43,7 +39,6 @@ namespace MusicDatabaseRedux.Controllers.Song_Controller
             var service = CreateSongService();
             if (!service.CreateSong(song)) return InternalServerError();
             return Ok("Song Added");
-
         }
 
         [HttpPut]
@@ -55,7 +50,7 @@ namespace MusicDatabaseRedux.Controllers.Song_Controller
 
             if (!service.UpdateSong(song)) return InternalServerError();
 
-            return Ok();
+            return Ok("Song has been updated");
         }
 
         [HttpDelete]

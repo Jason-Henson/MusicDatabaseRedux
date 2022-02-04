@@ -90,30 +90,12 @@
     <Compile Include="Album.cs" />
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202201252312574_InitMigration.cs" />
-    <Compile Include="Migrations\202201252312574_InitMigration.designer.cs">
-      <DependentUpon>202201252312574_InitMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201252314373_addingArtistTable.cs" />
-    <Compile Include="Migrations\202201252314373_addingArtistTable.designer.cs">
-      <DependentUpon>202201252314373_addingArtistTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Playlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Song.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202201252312574_InitMigration.resx">
-      <DependentUpon>202201252312574_InitMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201252314373_addingArtistTable.resx">
-      <DependentUpon>202201252314373_addingArtistTable.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
