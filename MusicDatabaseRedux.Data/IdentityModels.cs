@@ -34,6 +34,7 @@ namespace MusicDatabaseRedux.Data
             return new ApplicationDbContext();
         }
         public DbSet<Artist> Artists { get; set; }
+        public DbSet<SongAlbum> SongAlbums { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
