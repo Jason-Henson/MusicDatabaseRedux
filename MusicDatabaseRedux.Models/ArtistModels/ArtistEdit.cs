@@ -1,10 +1,9 @@
 ﻿namespace MusicDatabaseRedux.Models.ArtistModels
 {
-    public class ArtistUpdate
+    public class ArtistEdit
     {
         public int ArtistId { get; set; }
         public string Name { get; set; }
-        public int NumberOfMembers { get; set; }
-        public bool IsAlive { get; set; }
+        public bool IsAllive { get; set; }
     }
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MusicDatabaseRedux.Models.AlbumModels
+﻿namespace MusicDatabaseRedux.Models.AlbumModels
 {
     public class AlbumListItem
     {
+        public int AlbumID { get; set; }
+        public string ArtistName { get; set; }
     }
 }

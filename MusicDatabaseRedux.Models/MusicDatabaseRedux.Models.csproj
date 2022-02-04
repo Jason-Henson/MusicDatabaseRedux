@@ -48,6 +48,7 @@
     <Compile Include="AlbumModels\AlbumListItem.cs" />
     <Compile Include="ArtistModels\ArtistCreate.cs" />
     <Compile Include="ArtistModels\ArtistDetail.cs" />
+    <Compile Include="ArtistModels\ArtistEdit.cs" />
     <Compile Include="ArtistModels\ArtistUpdate.cs" />
     <Compile Include="ArtistModels\ArtistListItem.cs" />
     <Compile Include="PlaylistModels\PlaylistCreate.cs" />
@@ -60,9 +61,14 @@
     <Compile Include="SongAlbumModels\SongAlbumListItem.cs" />
     <Compile Include="SongModels\SongCreate.cs" />
     <Compile Include="SongModels\SongDetails.cs" />
-    <Compile Include="SongModels\SongIteam.cs" />
+    <Compile Include="SongModels\SongListItem.cs" />
     <Compile Include="SongModels\SongUpdate.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MusicDatabaseRedux.Data\MusicDatabaseRedux.Data.csproj">
+      <Project>{763E8B82-67B7-436C-9033-8DCBFFEFB115}</Project>
+      <Name>MusicDatabaseRedux.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
