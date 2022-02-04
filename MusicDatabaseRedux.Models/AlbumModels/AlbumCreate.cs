@@ -13,6 +13,7 @@ namespace MusicDatabaseRedux.Models.AlbumModels
 
         [Display(Name = "Artists ID")]
         public int ArtistID { get; set; }
+
         public int AlbumID { get; set; }
     }
 }

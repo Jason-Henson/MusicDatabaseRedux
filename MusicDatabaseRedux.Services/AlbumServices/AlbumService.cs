@@ -27,6 +27,11 @@ namespace MusicDatabaseRedux.Services.AlbumServices
             };
             using (var ctx = new ApplicationDbContext())
             {
+                var artist = ctx.Artists.SingleOrDefault(a => a.ArtistId == entity.ArtistID);
+                if (artist is null)
+                {
+                    return false;
+                }
                 ctx.Albums.Add(entity);
                 return ctx.SaveChanges() > 0;
             }
@@ -41,7 +46,7 @@ namespace MusicDatabaseRedux.Services.AlbumServices
                        .Select(e => new AlbumListItem
                        {
                            AlbumID = e.AlbumID,
-                           ArtistName = ctx.Albums.Find(e.AlbumID).Artist.Name
+                           ArtistName = e.Artist.Name
                        }
                       );
                 return query.ToArray();
@@ -54,12 +59,18 @@ namespace MusicDatabaseRedux.Services.AlbumServices
             {
                 var entity = ctx
                         .Albums
-                        .Single(e => e.AlbumID == id);
+                        .SingleOrDefault(e => e.AlbumID == id);
+                if (entity is null)
+                {
+                    return null;
+                }
                 return
                     new AlbumDetail
                     {
+                        ArtistID=entity.ArtistID,
                         AlbumID = entity.AlbumID,
-                        AlbumName = entity.AlbumName
+                        ArtistName=entity.Artist.Name,
+                        AlbumName = entity.AlbumName,
                     };
             }
         }
@@ -71,8 +82,11 @@ namespace MusicDatabaseRedux.Services.AlbumServices
                 var entity =
                     ctx
                         .Albums
-                        .Single(e => e.AlbumID == model.AlbumID);
-
+                        .SingleOrDefault(e => e.AlbumID == model.AlbumID);
+                if (entity is null)
+                {
+                    return false;
+                }
                 entity.AlbumName = model.AlbumName;
                 return ctx.SaveChanges() == 1;
             }
